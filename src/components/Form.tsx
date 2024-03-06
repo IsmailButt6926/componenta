@@ -98,57 +98,55 @@ const Form = () => {
     }, [validationErrors])
 
     return (
-        <>
-            <form>
-                <div className='grid gap-6 md:grid-cols-2'>
-                    <div className='flex flex-col gap-3'>
-                        <label className='text-lg font-semibold capitalize'>first name</label>
-                        <input type='text' name='fname' value={personalInfo?.fname} onChange={handleChange} className='border border-gray-300 bg-gray-50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none py-1 w-96 pl-3' placeholder='Ismail' />
-                        {validationErrors?.fname &&
-                            <span className='text-red-600'>{validationErrors?.fname}</span>
-                        }
-                    </div>
+        <form>
+            <div className='grid gap-6 md:grid-cols-2'>
+                <div className='flex flex-col gap-3'>
+                    <label className='text-lg font-semibold capitalize'>first name</label>
+                    <input type='text' name='fname' value={personalInfo?.fname} onChange={handleChange} className='border border-gray-300 bg-gray-50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none py-1 w-96 pl-3' placeholder='Ismail' />
+                    {validationErrors?.fname &&
+                        <span className='text-red-600'>{validationErrors?.fname}</span>
+                    }
+                </div>
 
-                    <div className='flex flex-col gap-3'>
-                        <label className='text-lg font-semibold capitalize'>last name</label>
-                        <input type='text' name='lname' value={personalInfo?.lname} onChange={handleChange} className='border border-gray-300 bg-gray-50 rounded-lg py-1 w-96 pl-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500  focus:outline-none' placeholder='Butt' />
-                        {validationErrors?.lname &&
-                            <span className='text-red-600'>{validationErrors?.lname}</span>
-                        }
-
-                    </div>
-
-                    <div className='flex flex-col gap-3'>
-                        <label className='text-lg font-semibold capitalize'>email</label>
-                        <input type='email' name='email' value={personalInfo?.email} onChange={handleChange} className='border border-gray-300 bg-gray-50 rounded-lg py-1 w-96 pl-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500  focus:outline-none' placeholder='ismail@12gmail.com' />
-                        {validationErrors?.email &&
-                            <span className='text-red-600'>{validationErrors?.email}</span>
-                        }
-
-                    </div>
-
-                    <div className='flex flex-col gap-3'>
-                        <label className='text-lg font-semibold capitalize'>phone number</label>
-                        <input type='tel' name='phone' value={personalInfo?.phone} onChange={handleChange} className='border border-gray-300 bg-gray-50 rounded-lg py-1 w-96 pl-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500  focus:outline-none' placeholder='phone ' />
-                        {validationErrors?.phone &&
-                            <span className='text-red-600'>{validationErrors?.phone}</span>
-                        }
-                    </div>
-
-                    <div className='flex flex-col gap-3'>
-                        <label className='text-lg font-semibold capitalize'>password</label>
-                        <input type='password' name='password' value={personalInfo?.password} onChange={handleChange} className='border border-gray-300 bg-gray-50 rounded-lg py-1 w-96 pl-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500  focus:outline-none' placeholder='password' />
-                        {validationErrors?.password &&
-                            <span className='text-red-600'>{validationErrors?.password}</span>
-                        }
-                    </div>
+                <div className='flex flex-col gap-3'>
+                    <label className='text-lg font-semibold capitalize'>last name</label>
+                    <input type='text' name='lname' value={personalInfo?.lname} onChange={handleChange} className='border border-gray-300 bg-gray-50 rounded-lg py-1 w-96 pl-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500  focus:outline-none' placeholder='Butt' />
+                    {validationErrors?.lname &&
+                        <span className='text-red-600'>{validationErrors?.lname}</span>
+                    }
 
                 </div>
 
+                <div className='flex flex-col gap-3'>
+                    <label className='text-lg font-semibold capitalize'>email</label>
+                    <input type='email' name='email' value={personalInfo?.email} onChange={handleChange} className='border border-gray-300 bg-gray-50 rounded-lg py-1 w-96 pl-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500  focus:outline-none' placeholder='ismail@12gmail.com' />
+                    {validationErrors?.email &&
+                        <span className='text-red-600'>{validationErrors?.email}</span>
+                    }
 
-                <button className='mt-8 bg-blue-700 hover:bg-blue-800 w-36 px-4 py-2.5 rounded-md text-white' onClick={handleSubmit}>Submit</button>
-            </form>
-        </>
+                </div>
+
+                <div className='flex flex-col gap-3'>
+                    <label className='text-lg font-semibold capitalize'>phone number</label>
+                    <input type='tel' name='phone' value={personalInfo?.phone} onChange={handleChange} className='border border-gray-300 bg-gray-50 rounded-lg py-1 w-96 pl-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500  focus:outline-none' placeholder='phone ' />
+                    {validationErrors?.phone &&
+                        <span className='text-red-600'>{validationErrors?.phone}</span>
+                    }
+                </div>
+
+                <div className='flex flex-col gap-3'>
+                    <label className='text-lg font-semibold capitalize'>password</label>
+                    <input type='password' name='password' value={personalInfo?.password} onChange={handleChange} className='border border-gray-300 bg-gray-50 rounded-lg py-1 w-96 pl-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500  focus:outline-none' placeholder='password' />
+                    {validationErrors?.password &&
+                        <span className='text-red-600'>{validationErrors?.password}</span>
+                    }
+                </div>
+
+            </div>
+
+
+            <button className='mt-8 bg-blue-700 hover:bg-blue-800 w-36 px-4 py-2.5 rounded-md text-white' onClick={handleSubmit}>Submit</button>
+        </form>
     )
 }
 
