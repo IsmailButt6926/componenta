@@ -12,6 +12,12 @@ import Notification from "./components/Notification";
 import PersonDataForm from "./components/PersonDataForm";
 import GridPractise from "./components/GridPractise";
 import ArrayPractise from "./components/ArrayPractise";
+import Steps from "./components/Steps";
+import Header from "./components/Header";
+import StepsRedux from "./components/StepsRedux";
+import NewSteps from "./components/NewSteps";
+import Rating from "./components/Rating";
+import Stepper from "./components/Stepper";
 function App() {
   const column = ["id", "name", "email", "phone"];
 
@@ -56,7 +62,23 @@ function App() {
       {/* <GridPractise /> */}
 
       {/* comp 8 */}
-      <ArrayPractise />
+      {/* <ArrayPractise /> */}
+
+      {/* comp 9 Steps using simple useState*/}
+      {/* <Steps /> */}
+
+      {/* comp 10 Steps using Redux toolkit*/}
+      {/* <Header />
+      <StepsRedux /> */}
+
+      {/* comp 11*/}
+      {/* <NewSteps /> */}
+
+      {/* comp 12*/}
+      {/* <Rating/> */}
+
+      {/* comp 13*/}
+      <Stepper/>
     </>
   );
 }
